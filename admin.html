@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Admin Chat - A2 Store</title>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="icon" type="image/png" href="../assets/logo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css"/>
+<link rel="stylesheet" href="../css/chat.css"/>
+</head>
+<body class="chat-body">
+<div class="bg-grid"></div>
+
+<div class="admin-chat">
+  <aside class="contacts-panel">
+    <div class="contacts-head">
+      <div class="brand-mini">
+        <img src="../assets/logo.png" alt="A2"/><strong>A2 ADMIN</strong>
+      </div>
+      <button id="logout-btn" class="btn btn-ghost btn-sm">Logout</button>
+    </div>
+    <input id="search" class="search-input" placeholder="Cari nama, email, UID, order ID..."/>
+    <div id="contacts" class="contacts-list"><div class="empty" style="padding:20px">Memuat…</div></div>
+  </aside>
+
+  <main class="chat-main">
+    <div id="chat-empty" class="chat-empty">
+      <img src="../assets/logo.png" alt="" style="width:80px;opacity:.6"/>
+      <p>Pilih pembeli di kiri untuk mulai chat.</p>
+    </div>
+
+    <section id="chat-box" class="chat-box" style="display:none">
+      <header id="chat-head" class="admin-chat-head"></header>
+      <div id="chat-messages" class="chat-messages"></div>
+      <div class="admin-actions-bar">
+        <button id="qris-btn" class="btn btn-outline btn-sm">📲 Kirim QRIS</button>
+        <button id="accept-btn" class="btn btn-primary btn-sm">✅ Terima Pembayaran</button>
+        <button id="reject-btn" class="btn btn-danger btn-sm">❌ Tolak</button>
+        <button id="complete-btn" class="btn btn-outline btn-sm">🏁 Selesaikan Pesanan</button>
+      </div>
+      <div class="chat-composer">
+        <button id="attach-btn" class="icon-btn" title="Lampirkan gambar/file">📎</button>
+        <input id="attach-file" type="file" accept="image/*" hidden/>
+        <input id="chat-input" type="text" placeholder="Ketik pesan, link PS, atau kode..."/>
+        <button id="send-btn" class="btn btn-primary">Kirim</button>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script type="module" src="../js/admin.js"></script>
+</body>
+</html>

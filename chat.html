@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Chat - A2 Store</title>
+<link rel="icon" type="image/png" href="../assets/logo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css"/>
+<link rel="stylesheet" href="../css/chat.css"/>
+</head>
+<body class="chat-body">
+<div class="bg-grid"></div>
+
+<div class="chat-page">
+  <header class="chat-topbar">
+    <button id="chat-back" class="icon-btn" aria-label="Kembali">←</button>
+    <div id="chat-head" class="chat-head"></div>
+    <button id="logout-btn" class="btn btn-ghost btn-sm">Keluar</button>
+  </header>
+
+  <div id="chat-messages" class="chat-messages"></div>
+  <div id="typing-indicator" class="typing" style="display:none">Admin sedang mengetik…</div>
+
+  <div class="chat-composer">
+    <button id="send-proof-btn" class="icon-btn" title="Kirim bukti pembayaran">📷</button>
+    <input id="proof-file" type="file" accept="image/*" hidden/>
+    <input id="chat-input" type="text" placeholder="Tulis pesan..." autocomplete="off"/>
+    <button id="chat-send" class="btn btn-primary">Kirim</button>
+  </div>
+</div>
+
+<script type="module" src="../js/chat.js"></script>
+</body>
+</html>
